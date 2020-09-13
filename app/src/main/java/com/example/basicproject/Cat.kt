@@ -9,7 +9,7 @@ class Cat(override val name:String,
        println("Мяу")
     }
 
-    override fun jump(): String {
+    override fun jump() {
         println("ДА-ДА, УМЕЮ")
     }
 }
