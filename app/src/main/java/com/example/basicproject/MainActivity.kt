@@ -7,6 +7,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val a : Byte = 8;
+
+        var animal = Animal("Barsik", 1, "маленький")
+        animal.info()
+
+        var animal2 = Cat("Kit", 4, "большой")
+        animal2.info()
+        animal2.jump()
     }
 }
