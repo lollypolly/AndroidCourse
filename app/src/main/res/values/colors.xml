@@ -5,6 +5,10 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="Black">#000000</color>
     <color name="Insta">#FAFAFA</color>
+    <color name="White">#FFFFFF</color>
+    <color name="log">#F2F2F2</color>
+    <color name="Insta2">#E5E5E5</color>
     <color name="COVID">#0095F7</color>
     <color name="line">#C7C7C7</color>
+    <color name="reg">#F5F5F5</color>
 </resources>
