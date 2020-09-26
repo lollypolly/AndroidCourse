@@ -4,15 +4,381 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Registration"
+    android:background="#FAFAFA">
+
+    <Toolbar
+        style="@style/Widget.MaterialComponents.Toolbar.Surface"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:elevation="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                style="Theme.AppCompat.Light.NoActionBar"
+                tools:ignore="UnknownId">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:text="polypollya"
+                android:textColor="@color/Black"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="Theme.AppCompat.Light.NoActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.333"
+                tools:ignore="NotSibling">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_moreabout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="Theme.AppCompat.Light.NoActionBar">
+
+            </ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </Toolbar>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="Theme.AppCompat.Light.NoActionBar"
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints,NotSibling"
+        tools:layout_editor_absoluteX="0dp">
+        <LinearLayout
+            style="Theme.AppCompat.Light.NoActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="125dp"
+            android:elevation="4dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Pедактировать..."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="12dp"
+            android:textColor="@color/Black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:elevation="4dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Статистика"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Промоакции"
+            android:elevation="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="12dp"
+            android:textColor="@color/Black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        style="Theme.AppCompat.Light.NoActionBar">
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:backgroundTint="#FAFAFA"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/me"
+            style="Theme.AppCompat.Light.NoActionBar"/>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:layout_marginLeft="72dp"
+            android:backgroundTint="#FAFAFA"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.535"
+            app:srcCompat="@drawable/pub"
+            tools:ignore="MissingConstraints"
+            style="Theme.AppCompat.Light.NoActionBar"/>
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:backgroundTint="#FAFAFA"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+            app:layout_constraintLeft_toLeftOf="@id/button2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/fol"
+            tools:ignore="MissingConstraints,NotSibling"
+            style="Theme.AppCompat.Light.NoActionBar"/>
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:backgroundTint="#FAFAFA"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/follow"
+            tools:ignore="MissingConstraints"
+            style="Theme.AppCompat.Light.NoActionBar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
+        android:id="@+id/textView"
+        android:elevation="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="11dp"
+        android:text="Посмотрите ресурсы по COVID-19 для бизнеса"
+        android:textColor="@color/COVID"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      />
+
+    <Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        style="Theme.AppCompat.Light.NoActionBar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="Theme.AppCompat.Light.NoActionBar">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="35dp"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_home"
+                tools:ignore="ContentDescription"
+                style="Theme.AppCompat.Light.NoActionBar">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="35dp"
+                android:layout_marginLeft="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_find"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                style="Theme.AppCompat.Light.NoActionBar">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="35dp"
+                android:layout_marginLeft="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_addd"
+                style="Theme.AppCompat.Light.NoActionBar">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_fav"
+                tools:ignore="ContentDescription"
+                style="Theme.AppCompat.Light.NoActionBar">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="60dp"
+                app:srcCompat="@drawable/me"
+                tools:ignore="ContentDescription"
+                style="Theme.AppCompat.Light.NoActionBar">
+
+
+            </ImageView>
+        </LinearLayout>
+
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        style="Theme.AppCompat.Light.NoActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="Theme.AppCompat.Light.NoActionBar">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:isScrollContainer="true"
+                app:srcCompat="@drawable/scroll"
+                style="Theme.AppCompat.Light.NoActionBar"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:isScrollContainer="true"
+                app:srcCompat="@drawable/scroll2"
+                style="Theme.AppCompat.Light.NoActionBar"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/editText"
+        style="Theme.AppCompat.Light.NoActionBar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:text="Polly"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/aboutme"
+        style="Theme.AppCompat.Light.NoActionBar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:inputType="textMultiLine"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
