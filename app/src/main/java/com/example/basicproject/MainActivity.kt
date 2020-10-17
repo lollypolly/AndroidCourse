@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             imgOne.visibility = View.VISIBLE
             img = imgOne
 
-        //    imgCat.startAnimation(AnimationUtils.loadAnimation(this,R.anim.scale))
+       
         }
 
         ic_two.setOnClickListener{
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             img?.visibility  = View.GONE
             imgTwo.visibility = View.VISIBLE
             img = imgTwo
-           // imgDog.startAnimation(AnimationUtils.loadAnimation(this,R.anim.alpha))
+           
         }
 
         ic_three.setOnClickListener{
