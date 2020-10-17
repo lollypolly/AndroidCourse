@@ -41,8 +41,6 @@ class MainActivity : AppCompatActivity() {
             img?.visibility  = View.GONE
             imgOne.visibility = View.VISIBLE
             img = imgOne
-
-       
         }
 
         ic_two.setOnClickListener{
@@ -53,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             img?.visibility  = View.GONE
             imgTwo.visibility = View.VISIBLE
             img = imgTwo
-           
         }
 
         ic_three.setOnClickListener{
