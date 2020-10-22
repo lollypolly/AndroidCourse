@@ -22,9 +22,8 @@ class CatProfile : AppCompatActivity() {
             if (CatRep[i].id == id) {
                 kindCat.text = CatRep[i].kind
                 countryCat.text = CatRep[i].country
-                photoCat.setImageResource(CatRep[i].photo)
                 contentCat.text = CatRep[i].content
-                break
+                photoCat.setImageResource(CatRep[i].photo)
             }
         }
 

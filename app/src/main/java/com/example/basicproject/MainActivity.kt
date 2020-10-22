@@ -3,7 +3,6 @@ package com.example.basicproject
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             }
         )
 
-        recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        recyclerView.addItemDecoration(SpaceItemDecoration(this))
 
         swipe.setOnRefreshListener {
             swipe.isRefreshing = false
