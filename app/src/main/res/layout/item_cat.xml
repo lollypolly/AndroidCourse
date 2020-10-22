@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="?attr/selectableItemBackground"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/img_cat"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/brit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cat_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Британская кошка"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintLeft_toRightOf="@+id/img_cat"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_cat" />
+
+
+    <TextView
+        android:id="@+id/tv_cat_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="#75FAE95A"
+        android:textColor="#090909"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_cat"
+        app:layout_constraintTop_toBottomOf="@id/tv_cat_kind"
+        tools:text="Великобритания" />
+
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="36dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_like_act" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
