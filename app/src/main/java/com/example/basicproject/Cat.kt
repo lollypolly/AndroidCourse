@@ -1,5 +1,6 @@
 package com.example.basicproject
 
+//base class of Cat
 data class Cat (
     val id : Int,
     val kind : String,
