@@ -1,23 +1,18 @@
 package com.example.basicproject
 
+import CatHolder
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class CatAdapter(
-    private var list: List<Cat>,
+    private val list: List<Cat>,
+    private val likeClick: (Cat, Int) -> Unit,
     private val itemClick: (Cat) -> Unit
 ) : RecyclerView.Adapter<CatHolder>() {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatHolder =
-        CatHolder.create(parent, itemClick)
-
-    override fun onBindViewHolder(holder: CatHolder, position: Int) =
-        holder.bind(list[position])
+        CatHolder.create(parent, likeClick, itemClick)
 
     override fun getItemCount(): Int = list.size
 
-    fun updateDataSource(newList: List<Cat>) {
-        list = newList
-        notifyDataSetChanged()
-    }
+    override fun onBindViewHolder(holder: CatHolder, position: Int) = holder.bind(list[position])
 }
