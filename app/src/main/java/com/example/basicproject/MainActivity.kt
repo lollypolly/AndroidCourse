@@ -34,17 +34,17 @@ class MainActivity : AppCompatActivity() {
         bottom_nav_bar.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.page_1 -> {
-                    changeFragment(textFragment)
+                    changeLastFragment(textFragment)
                     lastFragment = textFragment
                     true
                 }
                 R.id.page_2 -> {
-                    changeFragment(listFragment)
+                    changeLastFragment(listFragment)
                     lastFragment = listFragment
                     true
                 }
                 R.id.page_3 -> {
-                    changeFragment(cardFragment)
+                    changeLastFragment(cardFragment)
                     lastFragment = cardFragment
                     true
                 }
@@ -52,11 +52,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private fun changeFragment(Fragment: Fragment) {
+    private fun changeLastFragment(Fragment: Fragment) {
         if (Fragment != lastFragment)
             if (
-                Fragment == textFragment && (lastFragment == listFragment || lastFragment == cardFragment) ||
-                Fragment == listFragment && lastFragment == cardFragment
+                Fragment == textFragment && (lastFragment == cardFragment|| lastFragment == listFragment) ||
+                Fragment == listFragment && (lastFragment == cardFragment|| lastFragment == textFragment) ||
+                Fragment == cardFragment && (lastFragment == listFragment|| lastFragment == textFragment)
             )
                 supportFragmentManager.beginTransaction()
                     .hide(lastFragment)
