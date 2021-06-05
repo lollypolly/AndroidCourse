@@ -58,7 +58,7 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.8'
-    implementation 'androidx.room:room-runtime:2.3.0'// 3.13.+ require minSDK 21
+    implementation 'androidx.room:room-runtime:2.3.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

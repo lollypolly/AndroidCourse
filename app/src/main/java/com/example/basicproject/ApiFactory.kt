@@ -1,6 +1,5 @@
-package com.example.basicproject.data.api
+package com.example.basicproject
 
-import com.example.basicproject.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -11,7 +10,7 @@ object ApiFactory {
 
     private const val QUERY_API_KEY = "appid"
 
-    private val apiKeyInterceptor = Interceptor { chain ->
+    private val apiInterceptor = Interceptor { chain ->
         val original = chain.request()
         original.url().newBuilder()
             .addQueryParameter(QUERY_API_KEY, BuildConfig.API_KEY)
@@ -25,7 +24,7 @@ object ApiFactory {
 
     private val client by lazy {
         OkHttpClient.Builder()
-            .addInterceptor(apiKeyInterceptor)
+            .addInterceptor(apiInterceptor)
             .addInterceptor(LoggingInterceptor())
             .connectTimeout(30, TimeUnit.SECONDS)
             .build()

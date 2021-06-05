@@ -1,6 +1,6 @@
-package com.example.basicproject.data.api
+package com.example.basicproject
 
-import com.example.basicproject.WeatherResponse
+
 import retrofit2.http.GET
 import retrofit2.http.Query
 

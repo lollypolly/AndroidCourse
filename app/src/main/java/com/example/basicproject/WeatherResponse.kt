@@ -50,8 +50,8 @@ data class Main(
     var humidity: Int,
     @SerializedName("pressure")
     var pressure: Int,
-    @SerializedName("temp")
-    var temp: Double,
+    @SerializedName("tempr")
+    var tempr: Double,
     @SerializedName("temp_max")
     var tempMax: Double,
     @SerializedName("temp_min")
