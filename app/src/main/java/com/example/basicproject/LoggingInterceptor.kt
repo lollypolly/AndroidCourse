@@ -1,6 +1,5 @@
-package com.example.basicproject.data.api
+package com.example.basicproject
 
-import com.example.basicproject.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,3 +19,4 @@ class LoggingInterceptor(
     override fun intercept(chain: Interceptor.Chain): Response =
         loggingInterceptor.intercept(chain)
 }
+

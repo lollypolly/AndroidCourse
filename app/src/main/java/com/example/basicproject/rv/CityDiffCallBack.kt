@@ -1,13 +1,13 @@
-package com.example.basicproject.presentation.rv.recycler
+package com.example.basicproject.rv
 
 import android.os.Bundle
 import androidx.recyclerview.widget.DiffUtil
 import com.example.basicproject.WeatherResponse
-import com.example.basicproject.data.model.entity.WeatherEntity
+
 
 class CityDiffCallback(
-    private var oldList: List<WeatherEntity>,
-    private var newList: List<WeatherEntity>) : DiffUtil.Callback() {
+    private var oldList: List<WeatherResponse>,
+    private var newList: List<WeatherResponse>) : DiffUtil.Callback() {
 
     override fun getOldListSize(): Int {
         return oldList.size
@@ -26,8 +26,8 @@ class CityDiffCallback(
             if (oldList[oldItemPosition].name != (newList[newItemPosition].name)) {
                 putString("ARG_NAME", newList[newItemPosition].name)
             }
-            if (oldList[oldItemPosition].temp != (newList[newItemPosition].temp)) {
-                putString("ARG_INFO", newList[newItemPosition].temp.toString())
+            if (oldList[oldItemPosition].main.tempr.toInt() != (newList[newItemPosition].main.tempr.toInt())) {
+                putString("ARG_INFO", newList[newItemPosition].main.tempr.toInt().toString())
             }
 
         }
@@ -39,4 +39,3 @@ class CityDiffCallback(
     }
 
 }
-

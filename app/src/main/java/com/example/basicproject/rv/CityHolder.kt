@@ -1,4 +1,6 @@
+package com.example.basicproject.rv
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,27 +8,28 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basicproject.R
-import com.example.basicproject.data.model.entity.WeatherEntity
+import com.example.basicproject.WeatherResponse
+
+
 import kotlinx.android.extensions.LayoutContainer
-
 import kotlinx.android.synthetic.main.city_pattern.*
-
 
 class CityHolder(
     override val containerView: View,
     private val action: (Int) -> Unit
 ) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
-    fun bind(city: WeatherEntity) {
+    @SuppressLint("SetTextI18n")
+    fun bind(city: WeatherResponse) {
         with(city) {
             name_city.text = name
-            temp_rv.text = temp.toString() + '°'
-            var t = temp
-            if (t < -25) temp_rv.setTextColor(Color.parseColor("#7593FF"))
-            if (t >= -25 && t <= -15) temp_rv.setTextColor(Color.parseColor("#89FCE7"))
-            if (t >= -14 && t <= -5) temp_rv.setTextColor(Color.parseColor("#FFD597"))
-            if (t >= -4 && t <= 5) temp_rv.setTextColor(Color.parseColor("#FFA451"))
-            if (t >= 6) temp_rv.setTextColor(Color.parseColor("#FF8080"))
+            temp_rv.text = main.tempr.toInt().toString() + '°'
+           // val t = main.tempr.toInt()
+            if (main.tempr.toInt() < -25) temp_rv.setTextColor(Color.parseColor("#7593FF"))
+            if (main.tempr.toInt() >= -25 && main.tempr.toInt() <= -15) temp_rv.setTextColor(Color.parseColor("#89FCE7"))
+            if (main.tempr.toInt() >= -14 && main.tempr.toInt() <= -5) temp_rv.setTextColor(Color.parseColor("#FFD597"))
+            if (main.tempr.toInt() >= -4 && main.tempr.toInt() <= 5) temp_rv.setTextColor(Color.parseColor("#FFA451"))
+            if (main.tempr.toInt() >= 6) temp_rv.setTextColor(Color.parseColor("#FF8080"))
             itemView.setOnClickListener { action(id) }
         }
     }

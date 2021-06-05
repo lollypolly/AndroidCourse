@@ -1,15 +1,14 @@
-package com.example.basicproject.presentation.rv
+package com.example.basicproject.rv
 
-import CityHolder
 import android.os.Bundle
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.basicproject.data.model.entity.WeatherEntity
-import com.example.basicproject.presentation.rv.recycler.CityDiffCallback
+import com.example.basicproject.WeatherResponse
+
 
 class CityAdapter(
-    private var list: List<WeatherEntity>,
+    private var list: List<WeatherResponse>,
     private val action: (Int) -> Unit
 ) : RecyclerView.Adapter<CityHolder>() {
 
@@ -30,10 +29,10 @@ class CityAdapter(
 
     override fun getItemCount(): Int = list.size
 
-    fun updateData(newList: List<WeatherEntity>) {
+    fun updateData(newList: List<WeatherResponse>) {
         val callback = CityDiffCallback(list, newList)
         val diffResult = DiffUtil.calculateDiff(callback, true)
         diffResult.dispatchUpdatesTo(this)
-        list = mutableListOf<WeatherEntity>().apply { addAll(newList) }
+        list = mutableListOf<WeatherResponse>().apply { addAll(newList) }
     }
 }
